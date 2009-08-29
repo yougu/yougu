@@ -1,0 +1,10 @@
+.DS_Store
+log/*.log
+tmp/**/*
+db/*.sqlite3
+result
+results
+coverage.data
+coverage
+yougu.war
+db/database.yml
