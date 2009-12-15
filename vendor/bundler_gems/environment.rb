@@ -3,17 +3,19 @@ module Bundler
  file = File.expand_path(__FILE__)
  dir = File.dirname(file)
 
+  ENV["GEM_HOME"] = dir
+  ENV["GEM_PATH"] = dir
   ENV["PATH"]     = "#{dir}/../../bin:#{ENV["PATH"]}"
   ENV["RUBYOPT"]  = "-r#{file} #{ENV["RUBYOPT"]}"
 
   $LOAD_PATH.unshift File.expand_path("#{dir}/gems/activesupport-2.3.5/bin")
   $LOAD_PATH.unshift File.expand_path("#{dir}/gems/activesupport-2.3.5/lib")
+  $LOAD_PATH.unshift File.expand_path("#{dir}/gems/actionmailer-2.3.5/bin")
+  $LOAD_PATH.unshift File.expand_path("#{dir}/gems/actionmailer-2.3.5/lib")
   $LOAD_PATH.unshift File.expand_path("#{dir}/gems/rack-1.0.1/bin")
   $LOAD_PATH.unshift File.expand_path("#{dir}/gems/rack-1.0.1/lib")
   $LOAD_PATH.unshift File.expand_path("#{dir}/gems/actionpack-2.3.5/bin")
   $LOAD_PATH.unshift File.expand_path("#{dir}/gems/actionpack-2.3.5/lib")
-  $LOAD_PATH.unshift File.expand_path("#{dir}/gems/actionmailer-2.3.5/bin")
-  $LOAD_PATH.unshift File.expand_path("#{dir}/gems/actionmailer-2.3.5/lib")
   $LOAD_PATH.unshift File.expand_path("#{dir}/gems/rspec-1.2.9/bin")
   $LOAD_PATH.unshift File.expand_path("#{dir}/gems/rspec-1.2.9/lib")
   $LOAD_PATH.unshift File.expand_path("#{dir}/gems/haml-2.2.15/bin")
@@ -34,12 +36,12 @@ module Bundler
   @bundled_specs = {}
   @bundled_specs["activesupport"] = eval(File.read("#{dir}/specifications/activesupport-2.3.5.gemspec"))
   @bundled_specs["activesupport"].loaded_from = "#{dir}/specifications/activesupport-2.3.5.gemspec"
+  @bundled_specs["actionmailer"] = eval(File.read("#{dir}/specifications/actionmailer-2.3.5.gemspec"))
+  @bundled_specs["actionmailer"].loaded_from = "#{dir}/specifications/actionmailer-2.3.5.gemspec"
   @bundled_specs["rack"] = eval(File.read("#{dir}/specifications/rack-1.0.1.gemspec"))
   @bundled_specs["rack"].loaded_from = "#{dir}/specifications/rack-1.0.1.gemspec"
   @bundled_specs["actionpack"] = eval(File.read("#{dir}/specifications/actionpack-2.3.5.gemspec"))
   @bundled_specs["actionpack"].loaded_from = "#{dir}/specifications/actionpack-2.3.5.gemspec"
-  @bundled_specs["actionmailer"] = eval(File.read("#{dir}/specifications/actionmailer-2.3.5.gemspec"))
-  @bundled_specs["actionmailer"].loaded_from = "#{dir}/specifications/actionmailer-2.3.5.gemspec"
   @bundled_specs["rspec"] = eval(File.read("#{dir}/specifications/rspec-1.2.9.gemspec"))
   @bundled_specs["rspec"].loaded_from = "#{dir}/specifications/rspec-1.2.9.gemspec"
   @bundled_specs["haml"] = eval(File.read("#{dir}/specifications/haml-2.2.15.gemspec"))
