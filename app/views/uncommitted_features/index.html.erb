@@ -1,0 +1,28 @@
+<script type="text/javascript">
+  $(document).ready(function() {
+    $("#backlog-items").sortable({
+      update : function () {
+        var order = $('#backlog-items').sortable('serialize');
+        $.post('<%= update_order_uncommitted_features_path %>', order); 
+        
+        var items = $('#backlog-items li');
+
+        var uncommitted_effort = 0;
+        
+        items.each(function(i){
+          uncommitted_effort += Number(items[i].getAttribute('data-points'))
+        })
+        
+        $('#uncommitted_effort').html(uncommitted_effort);
+      }
+    });
+  });
+</script>
+<section id="backlog">
+  <header>
+    <div class="points" id="uncommitted_effort"><%= @uncommitted_effort %></div>
+    <h1>Uncommitted</h1>
+    <p><%= link_to 'Back to sprints', sprints_path %></p>
+  </header>
+  <%= render :partial => 'uncommitted_features', :object => @uncommitted_features %>
+</section>

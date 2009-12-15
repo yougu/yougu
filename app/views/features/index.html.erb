@@ -1,0 +1,38 @@
+<script type="text/javascript">
+  $(document).ready(function() {
+    $("#backlog-items").sortable({
+      update : function () {
+        var order = $('#backlog-items').sortable('serialize');
+        $.post('<%= update_order_sprint_features_path %>', order); 
+        
+        var items = $('#backlog-items li');
+
+        var committed = true;
+        var committed_effort = 0;
+        
+        items.each(function(i){
+          if(items[i].getAttribute('id') == 'item_marker') {
+            committed = false;
+          } else {
+            if(committed) {
+              items[i].className = "item commited"
+              committed_effort += Number(items[i].getAttribute('data-points'))
+            } else {
+              items[i].className = "item"
+            }
+          }
+        })
+        
+        $('#committed_effort').html(committed_effort);
+      }
+    });
+  });
+</script>
+<section id="backlog">
+  <header>
+    <div class="points" id="committed_effort"><%= @sprint.committed_effort %></div>
+    <h1>Sprint planning</h1>
+    <p><%= link_to 'Back to sprint', sprint_path(@sprint) %></p>
+  </header>
+  <%= render :partial => 'features', :object => @uncommitted_features, :locals => {:committed_features => @committed_features} %>
+</section>

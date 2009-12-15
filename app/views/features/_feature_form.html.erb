@@ -1,0 +1,8 @@
+<% form_for(feature_form, :url => feature_form.new_record? ? sprint_features_path : sprint_feature_path(@sprint, feature_form)) do |form| %>
+<table>
+  <tr><td>Description:</td><td><%= form.text_field :description %></td></tr>
+  <tr><td>Effort:</td><td><%= form.text_field :effort %></td></tr>
+</table>
+<%= form.submit feature_form.new_record? ? 'Add' : 'Save' %>
+<% end %>
+<%= button_to 'Cancel', sprint_features_path, :method => 'get' %>

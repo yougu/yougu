@@ -1,0 +1,11 @@
+<tr>
+  <% form_for(task_form, :url => task_form.new_record? ? sprint_tasks_path : sprint_task_path(@sprint, task_form)) do |form| %>
+    <%= hidden_field :task, :feature_id, :value => task_form.feature_id %>
+  <td><%= form.text_field :description %></td>
+  <td><%= form.text_field :point_person %></td>
+  <td><%= form.text_field :hours %></td>
+  <td><%= form.submit task_form.new_record? ? 'Add' : 'Save' %></td>
+  <% end %>
+  <td><%= button_to 'Cancel', sprint_tasks_path, :method => 'get' %></td>
+</tr>
+

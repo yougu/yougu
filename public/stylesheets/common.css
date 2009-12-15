@@ -1,0 +1,145 @@
+body {
+  font-family: Helvetica, Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-family: serif;
+  margin: 0;
+}
+
+#backlog {
+  display: block;
+  margin: 1em auto;
+  padding: 0;
+  width: 85%;
+}
+
+#backlog a {
+  color: #f60;
+  text-decoration: none;
+}
+
+#backlog a:hover {
+  color: #c60;
+}
+
+#backlog header {
+  -moz-border-radius: 1em;
+  -webkit-border-radius: 1em;
+  background: #333;
+  border: 1px solid;
+  color: #fff;
+  display: block;
+  margin: 0;
+  padding: 1em 2em;
+  /*position: fixed;*/
+  /*width: 76em;*/
+  /*z-index: 1000;*/
+}
+
+#backlog div.points {
+  -moz-border-radius: .5em;
+  -webkit-border-radius: .5em;
+  float: right;
+  font-weight: bold;
+  padding: .2em .4em;
+  text-align: center;
+  vertical-align: middle;
+}
+
+#backlog header div.points {
+  background: #c03;
+  border: .1em outset #f00;
+  color: #fff;
+  font-size: 2.1em;
+}
+
+#backlog ol li div.points {
+  background: #fff;
+  border: .1em outset #fff;
+}
+
+#backlog ol {
+  list-style-type: none;
+  margin: 0;
+  padding: .5em 2em;
+}
+
+#backlog li {
+  background: white;
+}
+
+#backlog ol li.item {
+  border: .1em solid #aaa;
+  border-bottom: .2em groove #aaa;
+  margin-top: .5em;
+  opacity: .7;
+  padding: .7em 1em 1.3em 1em;
+}
+
+#backlog ol li.item:hover {
+  opacity: 1;
+}
+
+#backlog ol li.commited {
+  background: #9f9;
+}
+
+#backlog ol li.expanded {
+  background: #ff9;
+  opacity: 1;
+}
+
+#backlog ol li.marker {
+  border: none;
+/*  border-bottom: .1em dashed #333;*/
+  margin: 1em -2em;
+  padding: 0;
+}
+
+#backlog ol li.marker hr {
+  border-top: none;
+  border-bottom: dashed;
+}
+
+#backlog ol li.item .details {
+  background: #fff;
+  border: 1px solid #fc0;
+  margin-top: 1em;
+  padding: 1em;
+}
+
+#backlog ol li.item .details p:first-child {
+  margin-top: 0;
+}
+
+#backlog ol li.item .details dl {
+  font-size: .8em;
+}
+
+#backlog ol li.item .details dl dt {
+  float: left;
+  margin-right: .2em;
+}
+
+#backlog ol li.item .details dl dd {
+  font-weight: bold;
+  margin: 0;
+}
+
+#backlog ol li.item ul.tags {
+  list-style: none;
+  padding: .5em 0 0 0;
+}
+
+#backlog ol li.item ul.tags li {
+  -moz-border-radius: .4em;
+  -webkit-border-radius: .4em;
+  background: #f90;
+  color: #fff;
+  display: inline;
+  font-size: .7em;
+  padding: 0 .5em;
+}
