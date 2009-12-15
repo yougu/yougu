@@ -8,3 +8,6 @@ coverage.data
 coverage
 yougu.war
 config/database.yml
+bin/*
+vendor/bundler_gems/*
+!vendor/bundler_gems/cache/
