@@ -7,4 +7,4 @@ results
 coverage.data
 coverage
 yougu.war
-db/database.yml
+config/database.yml
