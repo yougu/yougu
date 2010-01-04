@@ -1,7 +1,7 @@
 source "http://gemcutter.org"
 
 bundle_path "vendor/bundler_gems"
-disable_system_gems
+#disable_system_gems
 
 gem "rails", "2.3.5"
 
