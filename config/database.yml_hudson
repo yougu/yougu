@@ -21,6 +21,16 @@ test:
   password:
   socket: /tmp/mysql.sock
 
+cucumber:
+  adapter: mysql
+  encoding: utf8
+  reconnect: false
+  database: hudson_development
+  pool: 5
+  username: root
+  password:
+  socket: /tmp/mysql.sock
+
 production:
   adapter: mysql
   encoding: utf8
