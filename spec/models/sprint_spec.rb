@@ -4,8 +4,8 @@ describe Sprint do
   before(:each) do
     @valid_attributes = {
       :name => "value for name",
-      :start_date => ,
-      :end_date => 
+      :start_date => 3.weeks.ago,
+      :end_date => 2.weeks.ago
     }
   end
 

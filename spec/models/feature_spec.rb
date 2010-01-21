@@ -1,15 +1,15 @@
 require 'spec_helper'
 
-describe Features do
+describe Feature do
   before(:each) do
     @valid_attributes = {
-      :integer => ,
-      :integer => ,
-      :string => 
+      :description => "Start project",
+      :effort => 4,
+      :priority => 1,
     }
   end
 
   it "should create a new instance given valid attributes" do
-    Features.create!(@valid_attributes)
+    Feature.create!(@valid_attributes)
   end
 end
