@@ -1,0 +1,15 @@
+henk:
+  username: Jeroen
+  email: jeroen@yougu.org
+  crypted_password: 15a9614a534e4a8da8ef31782691837ffbe8927ccb5e0221e94a5562a25eb48f0300a39903512a9a751b2747c476d436d4c7ded36a11d3f5ceda88ccaf99bfac
+  password_salt: ZCbAF3p3ImCA2a8MeXkR
+  persistence_token: 7e4142659ab0f6e6a46169975d44dafa1dae0d56baae203f79f38127f689fcd1f0d45e0d5a206a4adb9390c9755386a2451309ec6866e55f9e0f393b236c51f8
+  single_access_token: 2tipKxrpbIyX_jv0rp3x
+  perishable_token: Y8CJ2MktryZRbFwqnSza
+  login_count: "5"
+  failed_login_count: "0"
+  last_request_at: 2010-01-24 14:56:05
+  current_login_at: 2010-01-24 14:55:54
+  last_login_at: 2010-01-24 14:50:45
+  current_login_ip: 127.0.0.1
+  last_login_ip: 127.0.0.1
