@@ -7,5 +7,5 @@ Feature Authentication
     Given I am the registered user Henk Verstraeten
     And I am on the login page
     When I login with valid credentials
-    Then I should be on the account page
-    And I should see "Login successful!"
+    Then I should be on the home page
+    And I should see "Successfully logged in."
