@@ -46,5 +46,5 @@ ActionController::Routing::Routes.draw do |map|
   
   map.resources :uncommitted_features, :collection => {:update_order => :post}
   
-  map.root :controller => :sprints
+  map.root :controller => :welcome
 end
