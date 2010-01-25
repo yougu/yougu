@@ -17,4 +17,5 @@ only :test do
   gem "test-unit", "1.2.3" # <== 1.2.3 for Ruby 1.9.1 support..
   gem "ci_reporter"
   gem "relevance-rcov"
+  gem "mocha"
 end
