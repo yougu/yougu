@@ -1,0 +1,7 @@
+%li
+  = link_to sprint.name, sprint_path(sprint) 
+  (
+  = link_to 'edit', edit_sprint_path(sprint) 
+  | 
+  = link_to 'delete', sprint_path(sprint), :method => :delete 
+  )
