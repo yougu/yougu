@@ -1,0 +1,11 @@
+%section{:id=>"backlog"}
+  %header
+    %h1 Sprints
+    %p
+  - form_for(@sprint) do |form| 
+    %table
+      %tr
+        %td Name:
+        %td= form.text_field :name
+    = form.submit 'Save' 
+  = button_to 'Cancel', sprints_path, :method => 'get' 

@@ -1,0 +1,7 @@
+%section{:id=>"backlog"}
+  %header
+    .points{:id=>"committed_effort"}
+      = @sprint.committed_effort 
+    %h1= @sprint.name 
+    %p= link_to 'Back to overview', sprints_path
+  = render :partial => 'features', :object => @sprint.features 
