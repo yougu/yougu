@@ -23,6 +23,7 @@ describe UserSessionsController do
     response.should redirect_to(root_url)
   end
   
+  #FIXME
   it "destroy action should destroy model and redirect to index action" do
     pending
     user_session = UserSession.first
