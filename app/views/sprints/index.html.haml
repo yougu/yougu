@@ -1,0 +1,15 @@
+%section{:id => "backlog"}
+  %header
+    %h1 Product Owner
+    %p 
+  = render :partial => 'sprints', :object => @sprints
+  
+  %p= link_to 'Uncommitted features', uncommitted_features_path
+
+%hr
+
+%section{:id=>"backlog"}
+  %header
+    %h1 Team member
+    %p
+  = render :partial => 'team_sprints', :object => @sprints
