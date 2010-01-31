@@ -1,0 +1,6 @@
+%section#backlog
+  %header
+    .points#committed_effort= @sprint.committed_effort
+    %h1 Tasks for #{@sprint.name} 
+    %p
+  = render :partial => 'features', :object => @sprint.features 

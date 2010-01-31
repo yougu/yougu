@@ -1,4 +1,4 @@
-<script type="text/javascript">
+:javascript
   $(document).ready(function() {
     $("#backlog-items").sortable({
       update : function () {
@@ -17,12 +17,10 @@
       }
     });
   });
-</script>
-<section id="backlog">
-  <header>
-    <div class="points" id="uncommitted_effort"><%= @uncommitted_effort %></div>
-    <h1>Uncommitted</h1>
-    <p><%= link_to 'Back to sprints', sprints_path %></p>
-  </header>
-  <%= render :partial => 'uncommitted_features', :object => @uncommitted_features %>
-</section>
+%section#backlog
+  %header
+    .points#uncommitted_effort
+      = @uncommitted_effort 
+    %h1 Uncommitted
+    %p= link_to 'Back to sprints', sprints_path
+  = render :partial => 'uncommitted_features', :object => @uncommitted_features 

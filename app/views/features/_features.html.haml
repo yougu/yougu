@@ -1,0 +1,11 @@
+%ol#backlog-items
+  = render :partial => 'feature', :collection => committed_features 
+  %li.marker#item_marker 
+    committed for sprint '#{@sprint.name}'
+    %hr
+    uncommitted backlog
+  = render :partial => 'feature', :collection => features 
+- if @new_feature 
+  = render :partial => 'feature_form', :object => @new_feature
+- else 
+  = button_to 'Add', new_sprint_feature_path, :method => :get 

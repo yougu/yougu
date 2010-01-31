@@ -1,0 +1,14 @@
+%li.item{:'data-points'=>"#{feature.effort}", :id => "item_#{feature.id}", :class => "#{'commited' if feature.sprint }"}
+  - if @edit_feature == feature 
+    = render :partial => 'feature_form', :object => feature 
+  - else
+    .points
+      %u= feature.effort
+    /##{feature.id} 
+    %b
+      %u= feature.description
+    (
+    = link_to 'edit', edit_sprint_feature_path(@sprint, feature) 
+    |
+    = link_to 'delete', sprint_feature_path(@sprint, feature), :method => :delete, :confirm => "Are you sure?"
+    )

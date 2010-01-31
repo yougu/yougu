@@ -1,3 +1,3 @@
-%ol{:id=>"backlog-items"}= render :partial => 'feature', :collection => features
+%ol#backlog-items= render :partial => 'feature', :collection => features
 
 = button_to 'Plan this sprint', sprint_features_path(@sprint), :method => :get 

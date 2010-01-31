@@ -1,0 +1,7 @@
+%ol#backlog-items
+  = render :partial => 'uncommitted_feature', :collection => uncommitted_features 
+
+- if @new_feature 
+  = render :partial => 'feature_form', :object => @new_feature
+- else 
+  = button_to 'Add', new_uncommitted_feature_path, :method => :get 

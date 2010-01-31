@@ -1,6 +1,6 @@
-%section{:id=>"backlog"}
+%section#backlog
   %header
-    .points{:id=>"committed_effort"}
+    .points#committed_effort
       = @sprint.committed_effort 
     %h1= @sprint.name 
     %p= link_to 'Back to overview', sprints_path

@@ -1,8 +1,0 @@
-<section id="backlog">
-  <header>
-    <div class="points" id="committed_effort"><%= @sprint.committed_effort %></div>
-    <h1>Tasks for <%= @sprint.name %></h1>
-    <p></p>
-  </header>
-  <%= render :partial => 'features', :object => @sprint.features %>
-</section>

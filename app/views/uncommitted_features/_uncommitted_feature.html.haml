@@ -1,0 +1,15 @@
+%li.item{:'data-points'=>"#{uncommitted_feature.effort}", :id => "item_#{uncommitted_feature.id}"}
+  - if @edit_feature == uncommitted_feature 
+    = render :partial => 'feature_form', :object => uncommitted_feature 
+  - else 
+    .points
+      %u= uncommitted_feature.effort
+    \#
+    = uncommitted_feature.id 
+    %b
+      %u= uncommitted_feature.description
+    (
+    = link_to 'edit', edit_uncommitted_feature_path(uncommitted_feature) 
+    |
+    = link_to 'delete', uncommitted_feature_path(uncommitted_feature), :method => :delete, :confirm => "Are you sure?" 
+    )

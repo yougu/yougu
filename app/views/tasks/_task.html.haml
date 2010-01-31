@@ -1,0 +1,9 @@
+- if @edit_task == task 
+  = render :partial => 'task_form', :object => task 
+- else 
+  %tr
+    %td= task.description
+    %td= task.point_person
+    %td= task.hours 
+    %td= link_to 'edit', edit_sprint_task_path(@sprint, task) if @new_task.nil? && @edit_task.nil?
+    %td= link_to 'delete', sprint_task_path(@sprint, task), :method => :delete if @new_task.nil? && @edit_task.nil?

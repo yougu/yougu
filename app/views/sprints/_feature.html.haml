@@ -1,7 +1,6 @@
-%li.item.commited{:data-points=>"#{feature.effort}"}
+%li.item.commited{:'data-points'=>"#{feature.effort}"}
   .points
     %u= feature.effort 
-  \#
-  = feature.id 
+  \##{feature.id}
   %b
     %u= feature.description

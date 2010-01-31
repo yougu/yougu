@@ -1,0 +1,10 @@
+- form_for(feature_form, :url => feature_form.new_record? ? uncommitted_features_path : uncommitted_feature_path(feature_form)) do |form| 
+  %table
+    %tr
+      %td Description:
+      %td= form.text_field :description 
+    %tr
+      %td Effort:
+      %td= form.text_field :effort 
+  = form.submit feature_form.new_record? ? 'Add' : 'Save'
+= button_to 'Cancel', uncommitted_features_path, :method => 'get' 
