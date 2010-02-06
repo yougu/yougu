@@ -8,7 +8,6 @@ coverage.data
 coverage
 yougu.war
 config/database.yml
-bin/*
 vendor/bundled_gems/*
 !vendor/bundled_gems/cache/
 rerun.txt

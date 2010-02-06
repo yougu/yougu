@@ -1,0 +1,121 @@
+body
+  font-family: Helvetica, Arial, sans-serif
+  margin: 0
+  padding: 0
+
+
+h1
+  font-family: serif
+  margin: 0
+
+
+#backlog
+  display: block
+  margin: 1em auto
+  padding: 0
+  width: 85%
+
+  a
+    color: #f60
+    text-decoration: none
+
+    &:hover
+      color: #c60
+
+  header
+    -moz-border-radius: 1em
+    -webkit-border-radius: 1em
+    background: #333
+    border: 1px solid
+    color: #fff
+    display: block
+    margin: 0
+    padding: 1em 2em
+
+  div.points
+    -moz-border-radius: .5em
+    -webkit-border-radius: .5em
+    float: right
+    font-weight: bold
+    padding: .2em .4em
+    text-align: center
+    vertical-align: middle
+
+  header div.points
+    background: #c03
+    border: .1em outset #f00
+    color: #fff
+    font-size: 2.1em
+
+  ol
+    list-style-type: none
+    margin: 0
+    padding: .5em 2em
+
+    li div.points
+      background: #fff
+      border: .1em outset #fff
+
+  li
+    background: white
+
+  ol li
+    &.item
+      border: .1em solid #aaa
+      border-bottom: .2em groove #aaa
+      margin-top: .5em
+      opacity: .7
+      padding: .7em 1em 1.3em 1em
+
+      &:hover
+        opacity: 1
+
+    &.commited
+      background: #9f9
+
+    &.expanded
+      background: #ff9
+      opacity: 1
+
+    &.marker
+      border: none
+      margin: 1em -2em
+      padding: 0
+
+      hr
+        border-top: none
+        border-bottom: dashed
+
+    &.item
+      .details
+        background: #fff
+        border: 1px solid #fc0
+        margin-top: 1em
+        padding: 1em
+
+        p:first-child
+          margin-top: 0
+
+        dl
+          font-size: .8em
+
+          dt
+            float: left
+            margin-right: .2em
+
+          dd
+            font-weight: bold
+            margin: 0
+
+      ul.tags
+        list-style: none
+        padding: .5em 0 0 0
+
+        li
+          -moz-border-radius: .4em
+          -webkit-border-radius: .4em
+          background: #f90
+          color: #fff
+          display: inline
+          font-size: .7em
+          padding: 0 .5em
