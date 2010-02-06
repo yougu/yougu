@@ -1,14 +1,11 @@
 source "http://gemcutter.org"
 source "http://gems.github.com"
 
-bundle_path "vendor/bundler_gems"
-#disable_system_gems
-
 gem "rails", "2.3.5"
 gem "authlogic"
 gem "haml"
 
-only :test do
+group :test do
   gem "rspec-rails"
   gem "cucumber"
   gem "cucumber-rails"
