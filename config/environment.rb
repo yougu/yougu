@@ -40,5 +40,5 @@ Rails::Initializer.run do |config|
   # config.i18n.default_locale = :de
 end
 # This is for gem-bundler to find all our gems
-require 'vendor/bundler_gems/environment.rb' # add dependenceies to load paths
-Bundler.require_env :optional_environment    # actually require the files
+# require 'vendor/bundled_gems/environment.rb' # add dependenceies to load paths
+# Bundler.require_env :optional_environment    # actually require the files
