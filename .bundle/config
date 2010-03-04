@@ -1,2 +1,3 @@
 --- 
 BUNDLE_PATH: vendor/bundled_gems
+BUNDLE_WITHOUT: ""
